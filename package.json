@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/index.scss:./css/index.css ./sass/restaurant.scss:./css/restaurant.css"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmimyy/ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hmimyy/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/hmimyy/ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
