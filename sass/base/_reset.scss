@@ -3,6 +3,12 @@ a{
     color: black;
 }
 
-h1 h2 h3 h4{
-    font-family: shrikhand;
+h1,h2,
+p, h3, h4 {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
 }
+
+
