@@ -1,13 +1,8 @@
 
 header{
-    background-color: red;
         .logo{
             display: flex;
-            img{ width: 500px;}
-        }
-        .localisation{ background-color: black;
-            i{ height: 100px;}
-            .fa-solid{}
-            p{}
+            justify-content: center;
+            padding: 10px;
         }
     }

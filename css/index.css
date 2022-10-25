@@ -3,20 +3,10 @@ a {
   color: black;
 }
 
-header {
-  background-color: red;
-}
 header .logo {
   display: flex;
-}
-header .logo img {
-  width: 500px;
-}
-header .localisation {
-  background-color: black;
-}
-header .localisation i {
-  height: 100px;
+  justify-content: center;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */
