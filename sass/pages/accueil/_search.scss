@@ -1,0 +1,36 @@
+.localisation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(236, 233, 233);
+    box-shadow: inset 0px 2px 2px 0px grey;
+}
+.reservation{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    row-gap: 20px;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    background-color: #f6f6f6;
+    box-shadow: inset 0px 2px 4px 0px darkgrey;
+            .titre_reservation{
+                display: flex;
+                flex-direction: column;
+            }
+            .button_explorer{
+                display: flex;
+                border-radius: 30px;
+                background-color: #9356DC;
+                color: white;
+                box-shadow: 0px 10px 13px -7px rgb(0 0 0 / 39%);
+                border: 0;
+                overflow: hidden;
+                padding: 15px;
+                font-size: 15px
+            }
+}

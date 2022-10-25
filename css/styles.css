@@ -16,12 +16,7 @@ p, h3, h4 {
 }
 
 .localisation{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background-color: rgb(236, 233, 233);
-    box-shadow: inset 0px 2px 2px 0px grey;
+    
 }
 
 .reservation{
