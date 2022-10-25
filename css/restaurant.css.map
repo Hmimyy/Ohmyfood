@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/base/_reset.scss","../sass/layout/_header.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;;ACAI;EACI;EACA;EACA","file":"restaurant.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/base/_reset.scss","../sass/layout/_header.scss","../sass/layout/_footer.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;;AAGJ;EACI;;;ACJI;EACI;EACA;EACA;;;ACLZ;EACI;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;;AAGL;EACK;EACA;EACA","file":"restaurant.css"}

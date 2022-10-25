@@ -3,10 +3,32 @@ a {
   color: black;
 }
 
+h1 h2 h3 h4 {
+  font-family: shrikhand;
+}
+
 header .logo {
   display: flex;
   justify-content: center;
   padding: 10px;
+}
+
+footer {
+  background-color: #353535;
+  padding: 20px;
+  gap: 10px;
+}
+footer .text_footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: column;
+  color: white;
+}
+footer a {
+  display: flex;
+  flex-direction: row;
+  color: rgba(255, 255, 255, 0.943);
 }
 
 /*# sourceMappingURL=restaurant.css.map */
