@@ -64,6 +64,8 @@ footer a {
 }
 .reservation .button_explorer {
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 30px;
   background-color: #9356DC;
   color: white;
@@ -72,6 +74,7 @@ footer a {
   overflow: hidden;
   padding: 15px;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .fonctionnement {
@@ -118,12 +121,11 @@ footer a {
   border-radius: 20px;
   box-shadow: 1px 1px 8px #e2e2e2;
   width: 100%;
-  height: 250px;
   display: flex;
   flex-direction: column;
 }
 .restaurants .carte_resto .image_resto {
-  height: 70%;
+  height: 150px;
   position: relative;
 }
 .restaurants .carte_resto .image_resto > img {
@@ -134,7 +136,7 @@ footer a {
 }
 .restaurants .carte_resto .image_resto > .new {
   position: absolute;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #278870;
   right: 20px;
   top: 15px;
@@ -145,20 +147,22 @@ footer a {
 .restaurants .carte_resto .description {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: relative;
+  height: auto;
 }
-.restaurants .carte_resto > .description_text {
+.restaurants .carte_resto .description_text {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  position: relative;
+  padding: 10px;
 }
-.restaurants .carte_resto > .like {
+.restaurants .carte_resto .like {
   position: top;
   display: flex;
   position: absolute;
-  top: 10px;
-  color: aqua;
+  right: 20px;
+  top: 15px;
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=index.css.map */
