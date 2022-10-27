@@ -1,0 +1,21 @@
+header{
+    
+    .retour{
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        left:30px;
+        top: 40px;
+        position: absolute;
+        a{
+            position: relative;
+        } 
+    }
+    .img_presentation{
+        display: flex;
+        justify-content: center;
+        img{
+            @include image;
+        } 
+    }
+}
