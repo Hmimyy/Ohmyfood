@@ -16,7 +16,12 @@ p, h3, h4 {
 header .logo {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  align-items: center;
+  padding: 20px;
+}
+header .logo > img {
+  height: 40px;
+  width: 200px;
 }
 
 footer {
@@ -30,7 +35,7 @@ footer .text_footer {
   padding-bottom: 20px;
   width: 100%;
   flex-direction: column;
-  color: white;
+  color: #f6f6f6;
 }
 footer h2 {
   font-family: "Shrikhand", cursive;
@@ -70,7 +75,7 @@ footer a {
 .reservation .button_explorer {
   border-radius: 30px;
   background-color: #9356DC;
-  color: white;
+  color: #f6f6f6;
   box-shadow: 0px 10px 13px -7px rgba(0, 0, 0, 0.39);
   border: 0;
   padding: 15px;
@@ -107,7 +112,7 @@ footer a {
   border-radius: 20px;
   background-color: #9356DC;
   text-align: center;
-  color: white;
+  color: #f6f6f6;
   font-size: 12px;
   padding-top: 3px;
 }
@@ -123,10 +128,10 @@ footer a {
   margin: 0 10px 0 10px;
 }
 .restaurants .carte_resto {
-  background-color: white;
-  border: 3px solid white;
+  background-color: #f6f6f6;
+  border: 3px solid #f6f6f6;
   border-radius: 20px;
-  box-shadow: 1px 1px 8px #e2e2e2;
+  box-shadow: 1px 1px 8px #f6f6f6;
   width: 100%;
   display: flex;
   flex-direction: column;

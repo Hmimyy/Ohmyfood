@@ -9,7 +9,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
-                background-color: #f6f6f6;
+                background-color: $background;
                 border-radius: 20px;
                 cursor: pointer;
                 height: 65px;
@@ -22,7 +22,7 @@
                     border-radius: 20px;
                     background-color: $primaire;
                     text-align: center;
-                    color: white;
+                    color:$background;
                     font-size: 12px;
                     padding-top: 3px;}
                 >i{

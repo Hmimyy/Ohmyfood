@@ -16,7 +16,12 @@ p, h3, h4 {
 header .logo {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  align-items: center;
+  padding: 20px;
+}
+header .logo > img {
+  height: 40px;
+  width: 200px;
 }
 
 footer {
@@ -30,7 +35,7 @@ footer .text_footer {
   padding-bottom: 20px;
   width: 100%;
   flex-direction: column;
-  color: white;
+  color: #f6f6f6;
 }
 footer h2 {
   font-family: "Shrikhand", cursive;
@@ -46,8 +51,8 @@ header .retour {
   display: flex;
   align-items: center;
   font-size: 30px;
-  left: 30px;
-  top: 40px;
+  left: 15px;
+  top: 35px;
   position: absolute;
 }
 header .retour a {

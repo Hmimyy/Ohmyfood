@@ -6,10 +6,10 @@
     margin: 0 10px 0 10px;
             
             .carte_resto{
-                background-color: white;
-        border: 3px solid white;
+                background-color: $background;
+        border: 3px solid $background;
         border-radius: 20px;
-        box-shadow: 1px 1px 8px #e2e2e2;
+        box-shadow: 1px 1px 8px $background;
         width: 100%;
         display: flex;
         flex-direction: column;
