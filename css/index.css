@@ -31,25 +31,17 @@ footer {
   gap: 10px;
   margin-top: 40px;
 }
-@media screen and (min-width: 768px) {
-  footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-}
-footer .text_footer {
+footer .titre_footer {
   display: flex;
   padding-bottom: 20px;
   flex-direction: column;
   color: #f6f6f6;
 }
 @media screen and (min-width: 768px) {
-  footer .text_footer {
+  footer .titre_footer {
     width: 100%;
     display: flex;
-    justify-content: center;
-    position: relative;
+    flex-direction: row;
   }
 }
 footer h2 {
@@ -60,20 +52,22 @@ footer h2 {
     width: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
   }
 }
-footer a {
+@media screen and (min-width: 768px) {
+  footer .text_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+  }
+}
+footer .text_footer a {
   display: flex;
   flex-direction: row;
   gap: 20px;
   color: rgba(255, 255, 255, 0.943);
-}
-@media screen and (min-width: 768px) {
-  footer a {
-    flex-direction: column;
-    align-content: center;
-  }
+  align-content: center;
 }
 
 .localisation {
@@ -139,6 +133,7 @@ footer a {
   .fonctionnement {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     column-gap: 15px;
   }
 }
