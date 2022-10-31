@@ -5,6 +5,7 @@ a {
 
 body {
   font-family: "Roboto", sans-serif;
+  margin: 10px;
 }
 
 h1, h2,
@@ -30,6 +31,14 @@ footer {
   gap: 10px;
   margin-top: 40px;
 }
+@media screen and (min-width: 768px) and (max-width: 1700px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 footer .text_footer {
   display: flex;
   padding-bottom: 20px;
@@ -46,6 +55,12 @@ footer a {
   gap: 20px;
   color: rgba(255, 255, 255, 0.943);
 }
+@media screen and (min-width: 768px) and (max-width: 1700px) {
+  footer a {
+    flex-direction: column;
+    align-content: center;
+  }
+}
 
 .localisation {
   display: flex;
@@ -54,18 +69,16 @@ footer a {
   gap: 10px;
   height: 30px;
   background-color: rgb(236, 233, 233);
-  box-shadow: inset 0px 2px 2px 0px grey;
+  border-top: 3px solid rgb(216, 212, 212);
 }
 
 .reservation {
   display: flex;
   flex-direction: column;
   text-align: center;
-  align-items: center;
-  row-gap: 20px;
+  gap: 20px;
   padding: 30px;
   background-color: #f6f6f6;
-  box-shadow: inset 0px 2px 4px 0px darkgrey;
 }
 .reservation .titre_reservation {
   display: flex;
@@ -92,7 +105,16 @@ footer a {
 .fonctionnement {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  gap: 20px;
+  padding-top: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 1700px) {
+  .fonctionnement {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 15px;
+  }
 }
 .fonctionnement .bouton_fonc {
   display: flex;
@@ -106,7 +128,7 @@ footer a {
 }
 .fonctionnement .bouton_fonc > p {
   position: absolute;
-  left: -8px;
+  left: -5px;
   width: 20px;
   height: 17px;
   border-radius: 20px;
@@ -119,6 +141,9 @@ footer a {
 .fonctionnement .bouton_fonc > i {
   color: grey;
 }
+.fonctionnement .bouton_fonc:hover {
+  background-color: rgb(230, 194, 235);
+}
 
 .restaurants {
   display: flex;
@@ -126,6 +151,13 @@ footer a {
   gap: 20px;
   padding-top: 20px;
   margin: 0 10px 0 10px;
+}
+@media screen and (min-width: 768px) and (max-width: 1700px) {
+  .restaurants {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .restaurants .carte_resto {
   background-color: #f6f6f6;

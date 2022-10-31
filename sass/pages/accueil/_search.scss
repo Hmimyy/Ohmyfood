@@ -5,17 +5,16 @@
     gap: 10px;
     height: 30px;
     background-color: rgb(236, 233, 233);
-    box-shadow: inset 0px 2px 2px 0px grey;
+    border-top: 3px solid rgb(216, 212, 212);
 }
 .reservation{
     display: flex;
     flex-direction: column;
     text-align: center;
-    align-items: center;
-    row-gap: 20px;
+    gap:20px;
     padding: 30px;
     background-color: $background;
-    box-shadow: inset 0px 2px 4px 0px darkgrey;
+   
     
             .titre_reservation{
                 display: flex;

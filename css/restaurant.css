@@ -5,6 +5,7 @@ a {
 
 body {
   font-family: "Roboto", sans-serif;
+  margin: 10px;
 }
 
 h1, h2,
@@ -30,6 +31,14 @@ footer {
   gap: 10px;
   margin-top: 40px;
 }
+@media screen and (min-width: 768px) and (max-width: 1700px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 footer .text_footer {
   display: flex;
   padding-bottom: 20px;
@@ -45,6 +54,12 @@ footer a {
   flex-direction: row;
   gap: 20px;
   color: rgba(255, 255, 255, 0.943);
+}
+@media screen and (min-width: 768px) and (max-width: 1700px) {
+  footer a {
+    flex-direction: column;
+    align-content: center;
+  }
 }
 
 header .retour {
@@ -120,6 +135,19 @@ header .img_presentation img {
   flex-direction: column;
   height: 60px;
   gap: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.repas .description_menu .text h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.repas .description_menu .text p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .repas .description_menu .prix {
   display: flex;

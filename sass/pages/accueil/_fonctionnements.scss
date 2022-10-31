@@ -2,7 +2,14 @@
 .fonctionnement{
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    gap: 20px;
+    padding-top: 20px;
+    @include desktop {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 15px;
+    }
         
 
             .bouton_fonc{
@@ -16,7 +23,7 @@
                 position: relative;
 
                 >p{position: absolute;
-                    left: -8px;
+                    left: -5px;
                     width: 20px;
                     height: 17px;
                     border-radius: 20px;
@@ -27,6 +34,10 @@
                     padding-top: 3px;}
                 >i{
                     color: grey;
+                                  
+                }
+                &:hover{
+                    background-color: rgb(230, 194, 235);
                 }
                 
             }

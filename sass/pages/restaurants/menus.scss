@@ -55,6 +55,19 @@
             flex-direction: column;
             height: 60px;
             gap: 10px;  
+            white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    h3{white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    p{white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
         }
 
         .prix {
