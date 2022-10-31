@@ -5,7 +5,7 @@ a {
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 10px;
+  margin: 20px;
 }
 
 h1, h2,
@@ -31,23 +31,37 @@ footer {
   gap: 10px;
   margin-top: 40px;
 }
-@media screen and (min-width: 768px) and (max-width: 1700px) {
+@media screen and (min-width: 768px) {
   footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
   }
 }
 footer .text_footer {
   display: flex;
   padding-bottom: 20px;
-  width: 100%;
   flex-direction: column;
   color: #f6f6f6;
 }
+@media screen and (min-width: 768px) {
+  footer .text_footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+}
 footer h2 {
   font-family: "Shrikhand", cursive;
+}
+@media screen and (min-width: 768px) {
+  footer h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
 }
 footer a {
   display: flex;
@@ -55,7 +69,7 @@ footer a {
   gap: 20px;
   color: rgba(255, 255, 255, 0.943);
 }
-@media screen and (min-width: 768px) and (max-width: 1700px) {
+@media screen and (min-width: 768px) {
   footer a {
     flex-direction: column;
     align-content: center;
@@ -76,9 +90,18 @@ footer a {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   gap: 20px;
   padding: 30px;
   background-color: #f6f6f6;
+}
+@media screen and (min-width: 768px) {
+  .reservation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 .reservation .titre_reservation {
   display: flex;
@@ -86,19 +109,23 @@ footer a {
   gap: 10px;
 }
 .reservation .button_explorer {
-  border-radius: 30px;
-  background-color: #9356DC;
-  color: #f6f6f6;
-  box-shadow: 0px 10px 13px -7px rgba(0, 0, 0, 0.39);
   border: 0;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  background: #FF79DA;
+  color: white;
   padding: 15px;
+  border-radius: 30px;
   font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0px 10px 13px -7px rgba(0, 0, 0, 0.39);
   cursor: pointer;
   transform: scale(1);
   transition-property: transform;
   transition-duration: 200ms;
 }
-.reservation .button_explorer:hover {
+.reservation:hover {
   transform: scale(1.15);
 }
 
@@ -108,12 +135,18 @@ footer a {
   gap: 20px;
   padding-top: 20px;
 }
-@media screen and (min-width: 768px) and (max-width: 1700px) {
+@media screen and (min-width: 768px) {
   .fonctionnement {
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
     column-gap: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement > h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 .fonctionnement .bouton_fonc {
@@ -125,6 +158,11 @@ footer a {
   cursor: pointer;
   height: 65px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement .bouton_fonc {
+    flex-basis: 30%;
+  }
 }
 .fonctionnement .bouton_fonc > p {
   position: absolute;
@@ -140,6 +178,7 @@ footer a {
 }
 .fonctionnement .bouton_fonc > i {
   color: grey;
+  margin-left: 12%;
 }
 .fonctionnement .bouton_fonc:hover {
   background-color: rgb(230, 194, 235);
@@ -152,11 +191,19 @@ footer a {
   padding-top: 20px;
   margin: 0 10px 0 10px;
 }
-@media screen and (min-width: 768px) and (max-width: 1700px) {
+@media screen and (min-width: 768px) {
   .restaurants {
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .restaurants > h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 .restaurants .carte_resto {
@@ -167,6 +214,11 @@ footer a {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .restaurants .carte_resto {
+    flex: 45%;
+  }
 }
 .restaurants .carte_resto .image_resto {
   height: 150px;

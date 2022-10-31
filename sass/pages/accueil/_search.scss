@@ -1,4 +1,4 @@
-.localisation{
+.localisation {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,34 +7,53 @@
     background-color: rgb(236, 233, 233);
     border-top: 3px solid rgb(216, 212, 212);
 }
-.reservation{
+
+.reservation {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap:20px;
+    align-items: center;
+    gap: 20px;
     padding: 30px;
     background-color: $background;
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+
+    .titre_reservation {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button_explorer {
+        @include desktop {}
+
+        border: 0;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        background: $secondaire;
+        color: white;
+        padding: 15px;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: 600;
+        box-shadow: 0px 10px 13px -7px rgb(0 0 0 / 39%);
+        cursor: pointer;
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 200ms;
+    }
+
    
-    
-            .titre_reservation{
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-            .button_explorer{
-                border-radius: 30px;
-                background-color: $primaire;
-                color: $background;
-                box-shadow: 0px 10px 13px -7px rgb(0 0 0 / 39%);
-                border: 0;
-                padding: 15px;
-                font-size: 15px;
-                cursor: pointer;
-                transform: scale(1);
-                transition-property: transform;
-                transition-duration: 200ms;
-                &:hover {
-                    transform: scale(1.15);
-                }
-            }
+
+    &:hover {
+        transform: scale(1.15);
+    }
 }

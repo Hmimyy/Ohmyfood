@@ -7,19 +7,28 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
     }
 
     .text_footer {
         display: flex;
         padding-bottom: 20px;
-        width: 100%;
         flex-direction: column;
         color:$background;
-       
+        @include desktop {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
     }
     h2{
         font-family: 'Shrikhand', cursive;
+        @include desktop {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
     }
 
    a {
