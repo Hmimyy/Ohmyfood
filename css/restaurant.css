@@ -6,6 +6,7 @@ a {
 body {
   font-family: "Roboto", sans-serif;
   margin: 20px;
+  background-color: #f6f6f6;
 }
 
 h1, h2,
@@ -14,11 +15,21 @@ p, h3, h4 {
   margin-block-end: 0px;
 }
 
+* {
+  font-family: roboto, sans-serif;
+}
+
 header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  header .logo {
+    margin-left: 40px;
+    justify-content: start;
+  }
 }
 header .logo > img {
   height: 40px;
@@ -73,72 +84,124 @@ footer .text_footer a {
 header .retour {
   display: flex;
   align-items: center;
+  justify-content: start;
   font-size: 30px;
-  left: 15px;
-  top: 35px;
-  position: absolute;
+  flex-basis: 25%;
+}
+@media screen and (min-width: 768px) {
+  header .retour {
+    position: absolute;
+    top: 45px;
+  }
 }
 header .retour a {
   position: relative;
 }
-header .img_presentation {
+
+.bloc_page {
+  background-color: #f6f6f6;
+  border-radius: 30px 30px 0 0;
+}
+.bloc_page .img_presentation {
   display: flex;
   justify-content: center;
 }
-header .img_presentation img {
+.bloc_page .img_presentation img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
 }
-
-.bloc_page {
-  position: relative;
-  background-color: #f6f6f6;
-  border-radius: 30px 30px 0px 0px;
-  margin: -30px -5px 0px -5px;
-  padding-bottom: 1px;
+@media screen and (min-width: 768px) {
+  .bloc_page .img_presentation img {
+    width: 50%;
+    height: 200px;
+    z-index: 1;
+    border-radius: 30px;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    box-shadow: 0px 0px 6px 4px #99e2d0;
+    border: 5px solid #99e2d0;
+  }
 }
 .bloc_page .titre {
   position: relative;
+  top: -20px;
   display: flex;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: unset;
+  background-color: #f6f6f6;
+  border-radius: 20px 20px 0 0;
+}
+@media screen and (min-width: 768px) {
+  .bloc_page .titre {
+    padding: 50px;
+  }
 }
 .bloc_page .titre h1 {
-  font-family: "Shrikhand", cursive;
+  font-family: shrikhand, sans-serif;
 }
-.bloc_page .like {
+.bloc_page .titre .like {
   position: absolute;
   right: 15px;
   top: 20px;
   font-size: 30px;
 }
-
-.repas {
+@media screen and (min-width: 768px) {
+  .bloc_page .titre .like {
+    right: 700px;
+    top: 50px;
+  }
+}
+.bloc_page .repas {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
-.repas .titre_repas {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .bloc_page .repas {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
-.repas .titre_repas h2 {
+.bloc_page .repas .titre_repas {
   display: flex;
-  padding: 10px;
+  margin-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .bloc_page .repas .titre_repas {
+    flex-basis: 100%;
+  }
+}
+.bloc_page .repas .titre_repas h2 {
+  display: flex;
   border-bottom: 5px solid #99e2d0;
+  width: 65px;
+  padding-bottom: 10px;
+  margin-top: 30px;
 }
-.repas .description_menu {
+.bloc_page .repas .description_menu {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  box-shadow: 0 0 6px 4px grey;
+  box-shadow: 0 0 6px 4px rgb(205, 203, 203);
   border-radius: 20px;
-  padding: 15px;
   border: none;
-  gap: 10px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-.repas .description_menu .text {
+@media screen and (min-width: 768px) {
+  .bloc_page .repas .description_menu {
+    flex-basis: 25%;
+    gap: 20px;
+    flex-direction: column;
+    box-shadow: 0px 0px 6px 4px #99e2d0;
+    border: 5px solid #99e2d0;
+  }
+}
+.bloc_page .repas .description_menu .text {
   display: flex;
   flex-direction: column;
   height: 60px;
@@ -147,24 +210,30 @@ header .img_presentation img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.repas .description_menu .text h3 {
+@media screen and (min-width: 768px) {
+  .bloc_page .repas .description_menu .text {
+    align-items: center;
+    padding: 10px;
+  }
+}
+.bloc_page .repas .description_menu .text h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.repas .description_menu .text p {
+.bloc_page .repas .description_menu .text p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.repas .description_menu .prix {
+.bloc_page .repas .description_menu .prix {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.repas .description_menu .check {
+.bloc_page .repas .description_menu .check {
   display: flex;
   flex-direction: column;
   justify-content: center;

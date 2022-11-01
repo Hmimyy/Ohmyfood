@@ -3,19 +3,16 @@ header{
     .retour{
         display: flex;
         align-items: center;
+        justify-content: start;
         font-size: 30px;
-        left:15px;
-        top: 35px;
-        position: absolute;
+        flex-basis: 25%;
+        @include desktop {
+            position: absolute;
+            top: 45px;
+        }
         a{
             position: relative;
         }  
     }
-    .img_presentation{
-        display: flex;
-        justify-content: center;
-        img{
-            @include image;
-        } 
-    }
+    
 }

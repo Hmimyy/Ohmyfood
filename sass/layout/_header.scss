@@ -5,6 +5,12 @@ header{
             justify-content: center;
             align-items: center;
             padding: 20px;
+            @include desktop {
+                margin-left: 40px;
+                justify-content: start;
+                
+                
+            }
             >img{
                 height: 40px;
                 width: 200px;
