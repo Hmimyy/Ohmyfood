@@ -4,11 +4,13 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding-bottom: 15px;
+            z-index: 1;
+          
             @include desktop {
                 margin-left: 40px;
                 justify-content: start;
-                
+
                 
             }
             >img{

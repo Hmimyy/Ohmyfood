@@ -23,6 +23,7 @@
                 align-items: center;
                 justify-content: space-around;
                 background-color: $background;
+                box-shadow: 0 0 6px 4px rgb(205, 203, 203);
                 border-radius: 20px;
                 cursor: pointer;
                 height: 65px;
@@ -44,6 +45,9 @@
                 >i{
                     color: grey;
                     margin-left: 12%;
+                    &:hover{
+                        color:$primaire
+                    }
                                   
                 }
                 &:hover{

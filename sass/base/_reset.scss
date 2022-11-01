@@ -3,7 +3,6 @@ a{
     color: black;
 }
 body{
-    font-family: 'Roboto', sans-serif;
     margin: 20px;
     background-color: $background;
 }
@@ -12,8 +11,4 @@ h1,h2,
 p, h3, h4 {
     margin-block-start: 0px;
     margin-block-end: 0px;
-}
-
-* {
-    font-family: roboto, sans-serif;
 }

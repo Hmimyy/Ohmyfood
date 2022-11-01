@@ -1,141 +1,135 @@
-.bloc_page {
-    
+.titre {
+    position: relative;
+    top: -20px;
+    display: flex;
+    padding: 40px;
     background-color: $background;
-    border-radius: 30px 30px 0 0;
+    padding-bottom: unset;
+    border-radius: 20px 20px 0 0;
 
-    .img_presentation {
-        display: flex;
+    @include desktop {
+        top: unset;
+        position: unset;
+    }
+
+    h1 {
+
+        font-family: shrikhand, sans-serif;
+        font-size: 25px;
+
+    }
+
+    .like {
+        position: absolute;
+        right: 10px;
+        top: 40px;
+        font-size: 25px;
+    }
+
+    i {
+        @include desktop {
+            position: relative;
+            top: 75px;
+            right: 680px;
+        }
+    }
+}
+
+.repas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include desktop {
+        flex-direction: row;
         justify-content: center;
-
-
-        img {
-            
-            @include image_presentation;
-            @include desktop {
-                width: 50%;
-                height: 200px;
-                z-index: 1;
-                border-radius: 30px;
-                position: absolute;
-                right: 25px;
-                top: 20px;
-                box-shadow: 0px 0px 6px 4px $tertiaire;
-                border: 5px solid $tertiaire;
-            }
-        }
+        flex-wrap: wrap;
 
     }
 
-    .titre {
-        position: relative;
-        top:-20px;
+    .titre_repas {
         display: flex;
-        padding: 20px;
-        padding-bottom: unset;
-        background-color: $background;
-        border-radius: 20px 20px 0 0 ;
-        @include desktop{
-           padding: 50px;
+        margin-left: 20px;
+
+        @include desktop {
+            flex-basis: 100%;
+            flex-direction: column;
+
         }
 
-        h1 {
-            
-            font-family: shrikhand, sans-serif;
+        h2 {
+            display: flex;
+            border-bottom: 5px solid $tertiaire;
+            width: 65px;
+            padding-bottom: 10px;
+            margin-top: 30px;
         }
-
-        .like {
-            position: absolute;
-            right: 15px;
-            top: 20px;
-            font-size: 30px;
-            @include desktop{
-                right: 700px;
-                top: 50px;
-                
-            }
-        }
-
     }
 
-
-    .repas {
+    .description_menu {
         display: flex;
-        flex-direction: column;
-        gap: 20px;
-        @include desktop{
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
-    
-        }
+        justify-content: space-between;
+        flex-direction: row;
+        box-shadow: 0 0 6px 4px rgb(205, 203, 203);
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
 
-        .titre_repas {
-            display: flex;
-            margin-left: 20px;
-            @include desktop{
-                flex-basis: 100%;
-        
-            }
-            h2 {
-                display: flex;
-                border-bottom: 5px solid $tertiaire;
-                width: 65px;
-                padding-bottom: 10px;
-                margin-top: 30px;        
-            }
-        }
-
-        .description_menu {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: row;
-            box-shadow: 0 0 6px 4px rgb(205, 203, 203);
-            border-radius: 20px;
-            border: none;
-           padding: 10px;
-           margin-left: 10px;
-           margin-right: 10px;
-           @include desktop{
-            flex-basis: 25%;
+        @include desktop {
+            width: 300px;
             gap: 20px;
             flex-direction: column;
             box-shadow: 0px 0px 6px 4px $tertiaire;
             border: 5px solid $tertiaire;
-           }
+        }
 
-            .text {
-                display: flex;
-                flex-direction: column;
-                height: 60px;
-                gap: 10px;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                @include desktop{
-                    align-items: center;
-                    padding: 10px;
-                }
+        .text {
+            display: flex;
+            flex-direction: column;
+            height: 60px;
+            gap: 10px;
+            @include point;
 
-                h3 {
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                }
+            @include desktop {
+                align-items: center;
+                padding: 10px;
 
-                p {
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                }
             }
 
-            .prix {
-                @include carte;
+            h3 {
+                @include point;
             }
 
-            .check {
-                @include carte;
+            p {
+                @include point;
             }
         }
+
+        .prix {
+            @include carte;
+        }
+
+        .check {
+            @include carte;
+        }
     }
+}
+
+.btn_commander {
+    display: flex;
+    border: none;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to bottom right, $secondaire, $primaire);
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0px 10px 13px -7px rgb(0 0 0 / 39%);
+    cursor: pointer;
+
 }

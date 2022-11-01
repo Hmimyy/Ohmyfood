@@ -16,6 +16,7 @@
     gap: 20px;
     padding: 30px;
     background-color: $background;
+
     @include desktop {
         display: flex;
         flex-direction: row;
@@ -32,13 +33,11 @@
     }
 
     .button_explorer {
-        @include desktop {}
-
         border: 0;
         display: flex;
         justify-content: center;
         width: 200px;
-        background: $secondaire;
+        background: linear-gradient(to bottom right, $secondaire, $primaire);
         color: white;
         padding: 15px;
         border-radius: 30px;
@@ -46,11 +45,5 @@
         font-weight: 600;
         box-shadow: 0px 10px 13px -7px rgb(0 0 0 / 39%);
         cursor: pointer;
-    }
-
-   
-
-    &:hover {
-        transform: scale(1.15);
     }
 }

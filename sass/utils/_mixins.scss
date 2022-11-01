@@ -25,3 +25,8 @@
       @content; 
     }
 }
+@mixin point {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

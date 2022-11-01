@@ -1,7 +1,8 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./base/reset";
+@import "./base/typographie";
 @import "./layout/header";
 @import "./layout/footer";
-@import "./pages/restaurants/presentation.scss";
-@import "./pages/restaurants/menus.scss"
+@import "./pages/restaurants/presentation";
+@import "./pages/restaurants/menus";

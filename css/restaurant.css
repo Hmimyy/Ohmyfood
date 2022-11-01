@@ -4,7 +4,6 @@ a {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   margin: 20px;
   background-color: #f6f6f6;
 }
@@ -16,14 +15,15 @@ p, h3, h4 {
 }
 
 * {
-  font-family: roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding-bottom: 15px;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   header .logo {
@@ -81,17 +81,31 @@ footer .text_footer a {
   align-content: center;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  header {
+    justify-content: start;
+    gap: unset;
+  }
+}
 header .retour {
   display: flex;
   align-items: center;
+  position: relative;
+  bottom: 5px;
+  right: 50px;
   justify-content: start;
   font-size: 30px;
-  flex-basis: 25%;
 }
 @media screen and (min-width: 768px) {
   header .retour {
-    position: absolute;
-    top: 45px;
+    right: unset;
   }
 }
 header .retour a {
@@ -101,10 +115,8 @@ header .retour a {
 .bloc_page {
   background-color: #f6f6f6;
   border-radius: 30px 30px 0 0;
-}
-.bloc_page .img_presentation {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 .bloc_page .img_presentation img {
   height: 100%;
@@ -114,8 +126,8 @@ header .retour a {
 @media screen and (min-width: 768px) {
   .bloc_page .img_presentation img {
     width: 50%;
-    height: 200px;
-    z-index: 1;
+    height: 180px;
+    z-index: 0;
     border-radius: 30px;
     position: absolute;
     right: 25px;
@@ -124,64 +136,70 @@ header .retour a {
     border: 5px solid #99e2d0;
   }
 }
-.bloc_page .titre {
+
+.titre {
   position: relative;
   top: -20px;
   display: flex;
-  padding: 20px;
-  padding-bottom: unset;
+  padding: 40px;
   background-color: #f6f6f6;
+  padding-bottom: unset;
   border-radius: 20px 20px 0 0;
 }
 @media screen and (min-width: 768px) {
-  .bloc_page .titre {
-    padding: 50px;
+  .titre {
+    top: unset;
+    position: unset;
   }
 }
-.bloc_page .titre h1 {
+.titre h1 {
   font-family: shrikhand, sans-serif;
+  font-size: 25px;
 }
-.bloc_page .titre .like {
+.titre .like {
   position: absolute;
-  right: 15px;
-  top: 20px;
-  font-size: 30px;
+  right: 10px;
+  top: 40px;
+  font-size: 25px;
 }
 @media screen and (min-width: 768px) {
-  .bloc_page .titre .like {
-    right: 700px;
-    top: 50px;
+  .titre i {
+    position: relative;
+    top: 75px;
+    right: 680px;
   }
 }
-.bloc_page .repas {
+
+.repas {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 @media screen and (min-width: 768px) {
-  .bloc_page .repas {
+  .repas {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
   }
 }
-.bloc_page .repas .titre_repas {
+.repas .titre_repas {
   display: flex;
   margin-left: 20px;
 }
 @media screen and (min-width: 768px) {
-  .bloc_page .repas .titre_repas {
+  .repas .titre_repas {
     flex-basis: 100%;
+    flex-direction: column;
   }
 }
-.bloc_page .repas .titre_repas h2 {
+.repas .titre_repas h2 {
   display: flex;
   border-bottom: 5px solid #99e2d0;
   width: 65px;
   padding-bottom: 10px;
   margin-top: 30px;
 }
-.bloc_page .repas .description_menu {
+.repas .description_menu {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -193,15 +211,15 @@ header .retour a {
   margin-right: 10px;
 }
 @media screen and (min-width: 768px) {
-  .bloc_page .repas .description_menu {
-    flex-basis: 25%;
+  .repas .description_menu {
+    width: 300px;
     gap: 20px;
     flex-direction: column;
     box-shadow: 0px 0px 6px 4px #99e2d0;
     border: 5px solid #99e2d0;
   }
 }
-.bloc_page .repas .description_menu .text {
+.repas .description_menu .text {
   display: flex;
   flex-direction: column;
   height: 60px;
@@ -211,34 +229,50 @@ header .retour a {
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
-  .bloc_page .repas .description_menu .text {
+  .repas .description_menu .text {
     align-items: center;
     padding: 10px;
   }
 }
-.bloc_page .repas .description_menu .text h3 {
+.repas .description_menu .text h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.bloc_page .repas .description_menu .text p {
+.repas .description_menu .text p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.bloc_page .repas .description_menu .prix {
+.repas .description_menu .prix {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.bloc_page .repas .description_menu .check {
+.repas .description_menu .check {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.btn_commander {
+  display: flex;
+  border: none;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0px 10px 13px -7px rgba(0, 0, 0, 0.39);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=restaurant.css.map */
