@@ -125,15 +125,14 @@ header .retour a {
 }
 @media screen and (min-width: 768px) {
   .bloc_page .img_presentation img {
-    width: 50%;
+    width: 40%;
     height: 180px;
     z-index: 0;
     border-radius: 30px;
     position: absolute;
     right: 25px;
     top: 20px;
-    box-shadow: 0px 0px 6px 4px #99e2d0;
-    border: 5px solid #99e2d0;
+    box-shadow: 0 0 6px 4px rgb(205, 203, 203);
   }
 }
 
@@ -148,58 +147,69 @@ header .retour a {
 }
 @media screen and (min-width: 768px) {
   .titre {
-    top: unset;
     position: unset;
+    top: unset;
+    display: flex;
+    padding: 50px;
+    flex-wrap: wrap;
   }
 }
 .titre h1 {
   font-family: shrikhand, sans-serif;
   font-size: 25px;
 }
-.titre .like {
+.titre .fa-regular {
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 40px;
   font-size: 25px;
 }
 @media screen and (min-width: 768px) {
-  .titre i {
-    position: relative;
-    top: 75px;
-    right: 680px;
+  .titre .fa-regular {
+    right: 70%;
+    top: 130px;
   }
 }
 
-.repas {
+.section_repas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .section_repas {
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+.section_repas .menu_bloc {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 @media screen and (min-width: 768px) {
-  .repas {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+  .section_repas .menu_bloc {
+    width: 30;
   }
 }
-.repas .titre_repas {
+.section_repas .menu_bloc .titre_repas {
   display: flex;
   margin-left: 20px;
 }
 @media screen and (min-width: 768px) {
-  .repas .titre_repas {
+  .section_repas .menu_bloc .titre_repas {
     flex-basis: 100%;
-    flex-direction: column;
   }
 }
-.repas .titre_repas h2 {
+.section_repas .menu_bloc .titre_repas h2 {
   display: flex;
   border-bottom: 5px solid #99e2d0;
   width: 65px;
   padding-bottom: 10px;
   margin-top: 30px;
 }
-.repas .description_menu {
+.section_repas .menu_bloc .description_menu {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -209,54 +219,74 @@ header .retour a {
   padding: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  flex: 1;
+  width: auto;
 }
-@media screen and (min-width: 768px) {
-  .repas .description_menu {
-    width: 300px;
-    gap: 20px;
-    flex-direction: column;
-    box-shadow: 0px 0px 6px 4px #99e2d0;
-    border: 5px solid #99e2d0;
-  }
-}
-.repas .description_menu .text {
+.section_repas .menu_bloc .description_menu .text {
   display: flex;
   flex-direction: column;
   height: 60px;
   gap: 10px;
+  width: 60%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@media screen and (min-width: 768px) {
-  .repas .description_menu .text {
-    align-items: center;
-    padding: 10px;
-  }
-}
-.repas .description_menu .text h3 {
+.section_repas .menu_bloc .description_menu .text h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.repas .description_menu .text p {
+.section_repas .menu_bloc .description_menu .text p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.repas .description_menu .prix {
+.section_repas .menu_bloc .description_menu .prix {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.repas .description_menu .check {
+.section_repas .menu_bloc .description_menu .check {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #99E2D0;
+  color: white;
+  font-size: 20px;
+  width: 0;
+  cursor: pointer;
+}
+.section_repas .menu_bloc .description_menu .check:hover {
+  width: 20%;
+  height: 60px;
+  background-color: #99e2d0;
+}
+.section_repas .menu_bloc .description_menu .check i {
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0deg);
+  transition: all 0.4s ease-in-out;
 }
 
 .btn_commander {

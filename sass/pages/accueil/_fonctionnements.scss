@@ -33,15 +33,19 @@
                 }
 
                 >p{position: absolute;
-                    left: -5px;
-                    width: 20px;
-                    height: 17px;
-                    border-radius: 20px;
+                    left: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
                     background-color: $primaire;
                     text-align: center;
                     color:$background;
-                    font-size: 12px;
-                    padding-top: 3px;}
+                    font-size: 16px;
+                    display: flex;
+                     justify-content: center;
+                    align-items: center;
+                    font-weight: bold;
+                }
                 >i{
                     color: grey;
                     margin-left: 12%;

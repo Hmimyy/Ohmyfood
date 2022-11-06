@@ -1,82 +1,100 @@
-.restaurants{
+.restaurants {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding-top: 20px;
     margin: 0 10px 0 10px;
+
     @include desktop {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
         flex-basis: 25%;
     }
-    >h2{
+
+    >h2 {
         @include desktop {
             width: 100%;
             display: flex;
             justify-content: center;
         }
     }
-   
-            
-            .carte_resto{
-                background-color: $background;
+
+
+    .carte_resto {
+        background-color: $background;
         border: 3px solid $background;
         border-radius: 20px;
         box-shadow: 1px 1px 8px $background;
         width: 100%;
         display: flex;
         flex-direction: column;
+
         @include desktop {
             flex: 45%;
         }
-        
-        
-            
-                .image_resto{
-                    height:150px;
-                    position: relative;
-                    >img{ 
-                        @include image;
-                    }
-                    >.new{
-                        position: absolute;
-                        background-color:$tertiaire;
-                        color: #278870;
-                        right: 20px;
-                        top: 15px;
-                        border-radius: 2px;
-                        padding: 5px;
-                        font-weight: bold;
-                        
-                    }
-                        
-                }
-                .description{
-                    display: flex;
-                    flex-direction: column;
-                    position: relative;
-                    height: auto;
-                
-                                        
-                }
-                    .description_text{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    padding: 10px;
 
-                    }
-                    .like{
-                    display: flex;
-                    position: absolute;                
-                    right: 20px;
-                    top:15px;
-                    font-size: 25px;
-            
-                }
-                    
+
+
+        .image_resto {
+            height: 150px;
+            position: relative;
+
+            >img {
+                @include image;
+            }
+
+            >.new {
+                position: absolute;
+                background-color: $tertiaire;
+                color: #278870;
+                right: 20px;
+                top: 15px;
+                border-radius: 2px;
+                padding: 5px;
+                font-weight: bold;
 
             }
 
-}
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: auto;
+
+
+        }
+
+        .description_text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+
+        }
+
+        .like {
+            display: flex;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 25px;
+                
+                .fa-heart{
+                    position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 25px;
+            &:hover{
+                    background: linear-gradient(to bottom right, $secondaire, $primaire);   
+                }
+            }
+    
+            }
+
+
+        }
+
+    }

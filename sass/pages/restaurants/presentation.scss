@@ -1,15 +1,16 @@
-header{
+header {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    @include desktop{
+
+    @include desktop {
         justify-content: start;
         gap: unset;
     }
-    
-    .retour{
+
+    .retour {
         display: flex;
         align-items: center;
         position: relative;
@@ -17,17 +18,20 @@ header{
         right: 50px;
         justify-content: start;
         font-size: 30px;
-        @include desktop{
-           right: unset;
+
+        @include desktop {
+            right: unset;
         }
-        a{
+
+        a {
             position: relative;
-        }  
+        }
     }
-    
+
 }
+
 .bloc_page {
-    
+
     background-color: $background;
     border-radius: 30px 30px 0 0;
     display: flex;
@@ -36,18 +40,18 @@ header{
     .img_presentation {
 
         img {
-            
+
             @include image_presentation;
+
             @include desktop {
-                width: 50%;
+                width: 40%;
                 height: 180px;
                 z-index: 0;
                 border-radius: 30px;
                 position: absolute;
                 right: 25px;
                 top: 20px;
-                box-shadow: 0px 0px 6px 4px $tertiaire;
-                border: 5px solid $tertiaire;
+                box-shadow: 0 0 6px 4px rgb(205, 203, 203);
             }
         }
 
