@@ -2,8 +2,9 @@
 @import "./utils/mixins";
 @import "./base/reset";
 @import "./base/typographie";
-@import"./layout/loader";
+@import "./layout/loader";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./pages/restaurants/presentation";
 @import "./pages/restaurants/menus";
+@import "./pages/restaurants/titre"
