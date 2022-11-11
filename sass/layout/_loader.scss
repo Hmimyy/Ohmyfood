@@ -1,0 +1,66 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top:0; bottom: 0; right: 0; left: 0;
+    background-color: $background;
+    opacity: 0;
+    transition: opacity 0.9s ease-out;
+
+    .load {
+        width: $size*10;
+        height: $size*7.5;
+        display: flex;
+        justify-content: space-evenly;
+
+        &__bar {
+            background-color: $primaire;
+            height: 100%;
+            width: $size;
+            animation: bars 1000ms backwards infinite ease-in-out alternate;
+            animation-direction: alternate;
+        }
+
+    }
+
+
+
+@keyframes bars {
+    0% {
+
+        transform: scale(0.5);
+
+    }
+
+    100% {
+
+        background-color: $secondaire;
+        transform: scaleY(1.0);
+
+    }
+}
+
+.load__bar--1 {
+    animation-delay: 200ms;
+}
+
+.load__bar--2 {
+    animation-delay: 400ms;
+}
+
+.load__bar--3 {
+    animation-delay: 600ms;
+}
+
+.load__bar--4 {
+    animation-delay: 800ms;
+}
+
+.load__bar--5 {
+    animation-delay: 1000ms;
+}
+}

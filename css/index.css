@@ -18,6 +18,58 @@ p, h3, h4 {
   font-family: "Roboto", sans-serif;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #f6f6f6;
+  opacity: 0;
+  transition: opacity 0.9s ease-out;
+}
+.container .load {
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.container .load__bar {
+  background-color: #9356DC;
+  height: 100%;
+  width: 3vh;
+  animation: bars 1000ms backwards infinite ease-in-out alternate;
+  animation-direction: alternate;
+}
+@keyframes bars {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    background-color: #FF79DA;
+    transform: scaleY(1);
+  }
+}
+.container .load__bar--1 {
+  animation-delay: 200ms;
+}
+.container .load__bar--2 {
+  animation-delay: 400ms;
+}
+.container .load__bar--3 {
+  animation-delay: 600ms;
+}
+.container .load__bar--4 {
+  animation-delay: 800ms;
+}
+.container .load__bar--5 {
+  animation-delay: 1000ms;
+}
+
 header .logo {
   display: flex;
   justify-content: center;
