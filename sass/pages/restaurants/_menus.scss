@@ -78,14 +78,30 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: #99E2D0;
+                background-color: $tertiaire;
                 color: white;
+                width: 0px;
                 font-size: 20px;
-                cursor: pointer;
+                transition: all 0.4 ease-in-out;
+               
+               
                 &:hover{
-                    transform: scale(1.4)rotate(180deg);
-                    width: 20%;
-                    background-color: $tertiaire;
+                    opacity: 1;
+                    transform: rotate(260deg) ;
+                    transition: all 0.4 ease-in;
+                  .fa-check{
+                    cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        background-color: $background;
+                        color: $tertiaire;
+                       
+                    }
+
                 }
 
                 
