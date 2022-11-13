@@ -28,6 +28,9 @@
                 cursor: pointer;
                 height: 65px;
                 position: relative;
+                &:hover{
+                    @include anim_bouton;
+                }
                 @include desktop {
                     flex-basis: 30%;
                 }

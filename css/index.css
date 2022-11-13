@@ -6,6 +6,31 @@
     transform: scale(1);
   }
 }
+@keyframes remp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bouton {
+  0% {
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+  }
+  25% {
+    transform: perspective(100px) translate3d(0px, 0px, -100px);
+  }
+  50% {
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+  }
+  75% {
+    transform: perspective(100px) translate3d(0px, 0px, 50px);
+  }
+  100% {
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+  }
+}
 a {
   text-decoration: none;
   color: black;
@@ -144,6 +169,9 @@ footer .text_footer a {
   color: rgba(255, 255, 255, 0.943);
   align-content: center;
 }
+footer .text_footer a:hover {
+  animation: bouton 2s linear infinite;
+}
 
 .localisation {
   display: flex;
@@ -191,6 +219,9 @@ footer .text_footer a {
   box-shadow: 0px 10px 13px -7px rgba(0, 0, 0, 0.39);
   cursor: pointer;
 }
+.reservation .button_explorer:hover {
+  animation: bouton 2s linear infinite;
+}
 
 .fonctionnement {
   display: flex;
@@ -223,6 +254,9 @@ footer .text_footer a {
   cursor: pointer;
   height: 65px;
   position: relative;
+}
+.fonctionnement .bouton_fonc:hover {
+  animation: bouton 2s linear infinite;
 }
 @media screen and (min-width: 768px) {
   .fonctionnement .bouton_fonc {
@@ -286,6 +320,9 @@ footer .text_footer a {
   display: flex;
   flex-direction: column;
 }
+.restaurants .carte_resto:hover {
+  animation: bouton 2s linear infinite;
+}
 @media screen and (min-width: 768px) {
   .restaurants .carte_resto {
     flex: 45%;
@@ -323,21 +360,37 @@ footer .text_footer a {
   justify-content: center;
   padding: 10px;
 }
-.restaurants .carte_resto .like {
-  display: flex;
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  font-size: 25px;
-}
 .restaurants .carte_resto .like .fa-heart {
   position: absolute;
   right: 20px;
-  top: 15px;
+  bottom: 15px;
   font-size: 25px;
 }
-.restaurants .carte_resto .like .fa-heart:hover {
-  color: linear-gradient(to bottom right, #FF79DA, #9356DC);
+.restaurants .carte_resto .like .fa-regular {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.restaurants .carte_resto .like .fa-regular:hover {
+  opacity: 0;
+  z-index: 1;
+}
+.restaurants .carte_resto .like .fa-regular:hover + .fa-solid {
+  opacity: 1;
+  z-index: 2;
+  animation: remp 0.5s linear both;
+}
+.restaurants .carte_resto .like .fa-solid {
+  z-index: 1;
+  opacity: 0;
+  background: linear-gradient(65deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  transform-origin: 50% bottom;
+  transform: scale(1);
+  animation: transform 0.5s cubic-bezier(0.43, 0.21, 1, 0.45);
 }
 
 /*# sourceMappingURL=index.css.map */

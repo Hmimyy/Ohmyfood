@@ -1,18 +1,19 @@
 @mixin image {
-    height: 100%;  
-     width: 100%;
-     object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     border-radius: 10px 10px 0 0;
-    
-}
-@mixin image_presentation {
-    height: 100%;  
-     width: 100%;
-     object-fit: cover;
-    
+
 }
 
-@mixin carte{
+@mixin image_presentation {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+@mixin carte {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,9 +23,10 @@
 
 @mixin desktop {
     @media screen and (min-width: 768px) {
-      @content; 
+        @content;
     }
 }
+
 @mixin point {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -49,11 +51,12 @@
         z-index: 2;
         opacity: 1;
         transition: opacity 0.5s ease-in-out;
+
         &:hover {
             opacity: 0;
             z-index: 1;
 
-            + .fa-solid {
+            +.fa-solid {
                 opacity: 1;
                 z-index: 2;
                 animation: fillHeart 0.5s linear both;
@@ -78,10 +81,86 @@
 }
 
 @keyframes fillHeart {
-    0%{
+    0% {
         transform: scale(0);
     }
-    100%{
+
+    100% {
         transform: scale(1);
+    }
+}
+
+@mixin like {
+    .fa-heart {
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+        font-size: 25px;
+    }
+
+    .fa-regular {
+        z-index: 2;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+
+        &:hover {
+            opacity: 0;
+            z-index: 1;
+
+            +.fa-solid {
+                opacity: 1;
+                z-index: 2;
+                animation: remp 0.5s linear both;
+            }
+        }
+    }
+
+    .fa-solid {
+        z-index: 1;
+        opacity: 0;
+        background: linear-gradient(65deg, $secondaire 0%, $primaire 100%);
+        background-clip: content-box;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        transform-origin: 50% bottom;
+        transform: scale(1);
+        animation: transform 0.5s cubic-bezier(0.43, 0.21, 1, 0.45);
+    }
+}
+
+@keyframes remp {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@mixin anim_bouton {
+    animation: bouton 2s linear infinite;
+}
+
+@keyframes bouton {
+    0% {
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+    }
+
+    25% {
+        transform: perspective(100px) translate3d(0px, 0px, -100px)
+    }
+
+    50% {
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+    }
+
+    75% {
+        transform: perspective(100px) translate3d(0px, 0px, 50px);
+    }
+
+    100% {
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
     }
 }
