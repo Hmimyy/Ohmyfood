@@ -1,3 +1,11 @@
+@keyframes fillHeart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 a {
   text-decoration: none;
   color: black;
@@ -19,55 +27,59 @@ p, h3, h4 {
 }
 
 .container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: #f6f6f6;
-  opacity: 0;
-  transition: opacity 0.9s ease-out;
+  z-index: 3;
+  animation: bounce 1.6s ease-in-out both;
+  animation-delay: 3s;
 }
 .container .load {
-  width: 30vh;
-  height: 22.5vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
-.container .load__bar {
-  background-color: #9356DC;
-  height: 100%;
-  width: 3vh;
-  animation: bars 1000ms backwards infinite ease-in-out alternate;
-  animation-direction: alternate;
+.container .load p {
+  color: #9356DC;
+  font-size: 40px;
+  font-family: "Shrikhand", cursive;
 }
-@keyframes bars {
-  0% {
-    transform: scale(0.5);
-  }
-  100% {
-    background-color: #FF79DA;
-    transform: scaleY(1);
+@keyframes bounce {
+  to {
+    transform: translate3d(0, -4rem, 0);
+    color: #FF79DA;
+    opacity: 0;
+    visibility: hidden;
   }
 }
-.container .load__bar--1 {
-  animation-delay: 200ms;
+.container .O {
+  animation: bounce 1.6s ease 0.2s infinite alternate;
 }
-.container .load__bar--2 {
-  animation-delay: 400ms;
+.container .h {
+  animation: bounce 1.6s ease 0.4s infinite alternate;
 }
-.container .load__bar--3 {
-  animation-delay: 600ms;
+.container .m {
+  animation: bounce 1.6s ease 0.6s infinite alternate;
 }
-.container .load__bar--4 {
-  animation-delay: 800ms;
+.container .y {
+  animation: bounce 1.6s ease 0.8s infinite alternate;
 }
-.container .load__bar--5 {
-  animation-delay: 1000ms;
+.container .f {
+  animation: bounce 1.6s ease 1s infinite alternate;
+}
+.container .o {
+  animation: bounce 1.6s ease 1.2s infinite alternate;
+}
+.container .o_2 {
+  animation: bounce 1.6s ease 1.4s infinite alternate;
+}
+.container .d {
+  animation: bounce 1.6s ease 1.6s infinite alternate;
 }
 
 header .logo {
@@ -272,28 +284,23 @@ header .retour a {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #99e2d0;
   color: white;
-  width: 0px;
+  width: 20%;
+  height: auto;
   font-size: 20px;
-  transition: all 0.4 ease-in-out;
+  opacity: 0;
 }
 .section_repas .menu_bloc .description_menu .check:hover {
   opacity: 1;
-  transform: rotate(260deg);
-  transition: all 0.4 ease-in;
+  transition: margin-right 2s ease-in-out 0.5s;
 }
-.section_repas .menu_bloc .description_menu .check:hover .fa-check {
-  cursor: pointer;
+.section_repas .menu_bloc .description_menu .check:hover .fa-circle-check {
+  font-size: 20px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
   background-color: #f6f6f6;
   color: #99e2d0;
 }
@@ -336,40 +343,43 @@ header .retour a {
   font-family: shrikhand, sans-serif;
   font-size: 25px;
 }
-.titre .fa-regular {
+.titre .heart .fa-heart {
   position: absolute;
   right: 20px;
   top: 40px;
   font-size: 25px;
-  transition: all 450ms;
 }
 @media screen and (min-width: 768px) {
-  .titre .fa-regular {
+  .titre .heart .fa-heart {
     right: 70%;
     top: 130px;
   }
 }
-.titre .fa-solid {
-  position: absolute;
-  right: 20px;
-  top: 40px;
-  font-size: 25px;
-  height: 100%;
-  opacity: 0;
-}
-.titre .fa-solid:hover {
-  cursor: pointer;
+.titre .heart .fa-regular {
+  z-index: 2;
   opacity: 1;
-  transition: all 0.2s linear 0s;
-  background: linear-gradient(200deg, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  transition: opacity 0.5s ease-in-out;
 }
-@media screen and (min-width: 768px) {
-  .titre .fa-solid {
-    right: 70%;
-    top: 130px;
-  }
+.titre .heart .fa-regular:hover {
+  opacity: 0;
+  z-index: 1;
+}
+.titre .heart .fa-regular:hover + .fa-solid {
+  opacity: 1;
+  z-index: 2;
+  animation: fillHeart 0.5s linear both;
+}
+.titre .heart .fa-solid {
+  z-index: 1;
+  opacity: 0;
+  background: linear-gradient(65deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  transform-origin: 50% bottom;
+  transform: scale(1);
+  animation: transform 0.5s cubic-bezier(0.43, 0.21, 1, 0.45);
 }
 
 /*# sourceMappingURL=restaurant.css.map */

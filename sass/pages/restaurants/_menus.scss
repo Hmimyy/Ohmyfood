@@ -75,36 +75,31 @@
 
             .check {
                 @include carte;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 background-color: $tertiaire;
                 color: white;
-                width: 0px;
+                width: 20%;
+                height: auto;
                 font-size: 20px;
-                transition: all 0.4 ease-in-out;
-               
-               
-                &:hover{
+                opacity: 0;
+
+                &:hover {
                     opacity: 1;
-                    transform: rotate(260deg) ;
-                    transition: all 0.4 ease-in;
-                  .fa-check{
-                    cursor: pointer;
+                    transition: margin-right 2s ease-in-out .5s;
+
+                    .fa-circle-check {
+                        font-size: 20px;
+                        border-radius: 50%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 25px;
-                        height: 25px;
-                        border-radius: 50%;
                         background-color: $background;
                         color: $tertiaire;
-                       
+
                     }
 
                 }
 
-                
+
             }
         }
     }

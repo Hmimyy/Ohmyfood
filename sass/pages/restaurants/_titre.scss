@@ -21,40 +21,7 @@
         font-size: 25px;
     }
 
-    .fa-regular {
-        position: absolute;
-        right: 20px;
-        top: 40px;
-        font-size: 25px;
-        transition: all 450ms;
-
-        @include desktop {
-            right: 70%;
-            top: 130px;
-        }
-    }
-
-    .fa-solid {
-        position: absolute;
-        right: 20px;
-        top: 40px;
-        font-size: 25px;
-        height: 100%;
-        opacity: 0;
-
-
-        &:hover {
-            cursor: pointer;
-            opacity: 1;
-            transition: all 0.2s linear 0s;
-            background: linear-gradient(200deg, $secondaire , $primaire );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        @include desktop {
-            right: 70%;
-            top: 130px;
-        }
+    .heart {
+     @include heart;
     }
 }

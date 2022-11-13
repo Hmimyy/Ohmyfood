@@ -83,12 +83,12 @@
             font-size: 25px;
                 
                 .fa-heart{
-                    position: absolute;
+             position: absolute;
             right: 20px;
             top: 15px;
             font-size: 25px;
             &:hover{
-                    background: linear-gradient(to bottom right, $secondaire, $primaire);   
+                    color: linear-gradient(to bottom right, $secondaire, $primaire);   
                 }
             }
     
