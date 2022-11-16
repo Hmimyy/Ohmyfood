@@ -14,23 +14,6 @@
     transform: scale(1);
   }
 }
-@keyframes bouton {
-  0% {
-    transform: perspective(100px) translate3d(0px, 0px, 0px);
-  }
-  25% {
-    transform: perspective(100px) translate3d(0px, 0px, -100px);
-  }
-  50% {
-    transform: perspective(100px) translate3d(0px, 0px, 0px);
-  }
-  75% {
-    transform: perspective(100px) translate3d(0px, 0px, 50px);
-  }
-  100% {
-    transform: perspective(100px) translate3d(0px, 0px, 0px);
-  }
-}
 a {
   text-decoration: none;
   color: black;
@@ -170,7 +153,12 @@ footer .text_footer a {
   align-content: center;
 }
 footer .text_footer a:hover {
-  animation: bouton 2s linear infinite;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+footer .text_footer a:hover:hover {
+  transform: scale(1.15);
 }
 
 .localisation {
@@ -220,7 +208,12 @@ footer .text_footer a:hover {
   cursor: pointer;
 }
 .reservation .button_explorer:hover {
-  animation: bouton 2s linear infinite;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+.reservation .button_explorer:hover:hover {
+  transform: scale(1.15);
 }
 
 .fonctionnement {
@@ -256,7 +249,12 @@ footer .text_footer a:hover {
   position: relative;
 }
 .fonctionnement .bouton_fonc:hover {
-  animation: bouton 2s linear infinite;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+.fonctionnement .bouton_fonc:hover:hover {
+  transform: scale(1.15);
 }
 @media screen and (min-width: 768px) {
   .fonctionnement .bouton_fonc {
@@ -319,9 +317,6 @@ footer .text_footer a:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-.restaurants .carte_resto:hover {
-  animation: bouton 2s linear infinite;
 }
 @media screen and (min-width: 768px) {
   .restaurants .carte_resto {

@@ -29,10 +29,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        &:hover{
-                @include anim_bouton;
-        }
-
+        
         @include desktop {
             flex: 45%;
         }

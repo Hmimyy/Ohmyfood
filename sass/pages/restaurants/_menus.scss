@@ -15,7 +15,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-
+        
         @include desktop {
             width: 30%;
         }
@@ -44,13 +44,8 @@
             flex-direction: row;
             box-shadow: 0 0 6px 4px rgb(205, 203, 203);
             border-radius: 20px;
-            border: none;
-            &:hover{
-                @include anim_bouton;
-            }
+            border: none; 
            
-
-
             .text {
                 display: flex;
                 flex-direction: column;
@@ -87,9 +82,7 @@
                 font-size: 20px;
                 opacity: 0;
                 margin-right: -25px;
-                
-                
-
+               
                 &:hover {
                     cursor: pointer;
                     opacity: 1;
@@ -99,10 +92,11 @@
                     margin-right: 0;
                     border-radius: 0 10px 10px 0;
                     
+                    
                 
                     .fa-circle-check{
                         font-weight: 900;
-                        animation: rotation 2s linear infinite reverse;
+                        animation: rotation 2s linear ;
                     @keyframes rotation {
                         0%{
                             transform: rotate(0) translateX(0px);
@@ -140,5 +134,9 @@
     font-weight: bold;
     box-shadow: 0px 10px 13px 3px rgb(0 0 0 / 40%);
     cursor: pointer;
+    &:hover{
+        @include anim_bouton;
+        background:linear-gradient(65deg, $primaire 20%, $secondaire 80%);
+    }
 
 }

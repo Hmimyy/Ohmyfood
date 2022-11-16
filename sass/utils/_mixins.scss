@@ -140,27 +140,12 @@
 }
 
 @mixin anim_bouton {
-    animation: bouton 2s linear infinite;
-}
-
-@keyframes bouton {
-    0% {
-        transform: perspective(100px) translate3d(0px, 0px, 0px);
-    }
-
-    25% {
-        transform: perspective(100px) translate3d(0px, 0px, -100px)
-    }
-
-    50% {
-        transform: perspective(100px) translate3d(0px, 0px, 0px);
-    }
-
-    75% {
-        transform: perspective(100px) translate3d(0px, 0px, 50px);
-    }
-
-    100% {
-        transform: perspective(100px) translate3d(0px, 0px, 0px);
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+    &:hover {
+        transform: scale(1.15);
     }
 }
+
+
