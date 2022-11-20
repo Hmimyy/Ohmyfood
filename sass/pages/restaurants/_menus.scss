@@ -17,16 +17,12 @@
         gap: 20px;
         
         @include desktop {
-            width: 30%;
+            width:30%;
         }
 
         .titre_repas {
             display: flex;
             margin-left: 20px;
-
-            @include desktop {
-                flex-basis: 100%;
-            }
 
             h2 {
                 display: flex;
@@ -81,8 +77,7 @@
                 color: white;
                 font-size: 20px;
                 opacity: 0;
-                margin-right: -25px;
-               
+                margin-right: -25px;  
                 &:hover {
                     cursor: pointer;
                     opacity: 1;
@@ -90,13 +85,11 @@
                     padding-top: 0;
                     padding-bottom: 0;
                     margin-right: 0;
-                    border-radius: 0 10px 10px 0;
+                    border-radius: 0 20px 20px 0;
                     
-                    
-                
                     .fa-circle-check{
                         font-weight: 900;
-                        animation: rotation 2s linear ;
+                        animation: rotation 1s linear ;
                     @keyframes rotation {
                         0%{
                             transform: rotate(0) translateX(0px);
@@ -137,6 +130,8 @@
     &:hover{
         @include anim_bouton;
         background:linear-gradient(65deg, $primaire 20%, $secondaire 80%);
+        box-shadow:  5px 5px 20px 5px $primaire, -5px -5px 20px 5px $secondaire;
+       
     }
 
 }

@@ -243,11 +243,6 @@ header .retour a {
   display: flex;
   margin-left: 20px;
 }
-@media screen and (min-width: 768px) {
-  .section_repas .menu_bloc .titre_repas {
-    flex-basis: 100%;
-  }
-}
 .section_repas .menu_bloc .titre_repas h2 {
   display: flex;
   border-bottom: 5px solid #99e2d0;
@@ -316,11 +311,11 @@ header .retour a {
   padding-top: 0;
   padding-bottom: 0;
   margin-right: 0;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 20px 20px 0;
 }
 .section_repas .menu_bloc .description_menu .check:hover .fa-circle-check {
   font-weight: 900;
-  animation: rotation 2s linear;
+  animation: rotation 1s linear;
 }
 @keyframes rotation {
   0% {
@@ -351,6 +346,7 @@ header .retour a {
   transition-property: transform;
   transition-duration: 400ms;
   background: linear-gradient(65deg, #9356DC 20%, #FF79DA 80%);
+  box-shadow: 5px 5px 20px 5px #9356DC, -5px -5px 20px 5px #FF79DA;
 }
 .btn_commander:hover:hover {
   transform: scale(1.15);

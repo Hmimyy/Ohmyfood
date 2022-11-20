@@ -212,6 +212,8 @@ footer .text_footer a:hover:hover {
   transform: scale(1);
   transition-property: transform;
   transition-duration: 400ms;
+  background: linear-gradient(65deg, #9356DC 20%, #FF79DA 80%);
+  box-shadow: 5px 5px 20px 5px #9356DC, -5px -5px 20px 5px #FF79DA;
 }
 .reservation .button_explorer:hover:hover {
   transform: scale(1.15);

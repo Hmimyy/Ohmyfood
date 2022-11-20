@@ -47,6 +47,8 @@
         cursor: pointer;
         &:hover{
             @include anim_bouton;
+            background:linear-gradient(65deg, $primaire 20%, $secondaire 80%);
+            box-shadow:  5px 5px 20px 5px $primaire, -5px -5px 20px 5px $secondaire;
         }
     }
 }
