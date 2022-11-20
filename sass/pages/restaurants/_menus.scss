@@ -41,7 +41,7 @@
             box-shadow: 0 0 6px 4px rgb(205, 203, 203);
             border-radius: 20px;
             border: none; 
-           
+            overflow: hidden;
             .text {
                 display: flex;
                 flex-direction: column;
@@ -66,50 +66,33 @@
 
             .prix {
                 @include carte;
-                width: 50px;
+                width: 75px;
                 font-weight: 900;
             }
 
             .check {
                 @include carte;
-                width: 50px;
+                width: 75px;
                 background-color: $tertiaire;
                 color: white;
                 font-size: 20px;
-                opacity: 0;
-                margin-right: -25px;  
-                &:hover {
-                    cursor: pointer;
-                    opacity: 1;
-                    overflow: hidden;
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    margin-right: 0;
-                    border-radius: 0 20px 20px 0;
-                    
-                    .fa-circle-check{
-                        font-weight: 900;
-                        animation: rotation 1s linear ;
-                    @keyframes rotation {
-                        0%{
-                            transform: rotate(0) translateX(0px);
-                        }
-                        100%{ 
-                            transform: rotate(360deg) ;
-                        }
-                        
-                    }
-                       
-                    }
-            
-
+                margin-right: -75px; 
+                transition-duration: 0.9s; 
                 }
-
+                &:hover > .check { margin-right: 0;}
+                &:hover .fa-circle-check{
+                    transition: all 0.5s 0.5s;
+                    transform: rotate(360deg);
+                }
+                    
+                   
+                    
+                   
 
             }
         }
     }
-}
+
 
 
 
