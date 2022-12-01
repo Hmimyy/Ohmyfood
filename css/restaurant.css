@@ -21,8 +21,8 @@ a {
 
 body {
   background-color: #f6f6f6;
-  width: auto;
-  margin: 0;
+  margin: 0%;
+  width: 100%;
 }
 
 h1, h2,
@@ -113,13 +113,14 @@ footer {
   gap: 10px;
   margin-top: 20px;
   width: auto;
+  flex: 1;
 }
 footer .titre_footer {
   display: flex;
   flex-direction: column;
   color: #f6f6f6;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   footer .titre_footer {
     display: flex;
     flex-direction: row;
@@ -128,14 +129,14 @@ footer .titre_footer {
 footer h2 {
   font-family: "Shrikhand", cursive;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   footer h2 {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   footer .text_footer {
     display: flex;
     flex-direction: row;
@@ -189,15 +190,20 @@ header .retour a {
   display: flex;
   flex-direction: column;
 }
+.bloc_page .img_presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .bloc_page .img_presentation img {
-  height: 100%;
+  height: 50%;
   width: 100%;
   object-fit: cover;
 }
-@media screen and (max-width: 300px) {
+@media screen and (min-width: 768px) {
   .bloc_page .img_presentation img {
-    height: 300px;
-    width: 100%;
+    width: 900px;
+    height: 500px;
   }
 }
 
@@ -207,7 +213,7 @@ header .retour a {
   gap: 20px;
   flex-wrap: wrap;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .section_repas {
     justify-content: center;
     flex-direction: row;
@@ -218,7 +224,7 @@ header .retour a {
   flex-direction: column;
   gap: 20px;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .section_repas .menu_bloc {
     width: 30%;
   }
@@ -363,10 +369,8 @@ header .retour a {
   padding-bottom: unset;
   border-radius: 20px 20px 0 0;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .titre {
-    position: unset;
-    top: unset;
     display: flex;
     padding: 50px;
     flex-wrap: wrap;

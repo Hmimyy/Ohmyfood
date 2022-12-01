@@ -32,13 +32,18 @@ header {
     flex-direction: column;
 
     .img_presentation {
+        display: flex;
+                justify-content: center;
+                align-items: center;
+
 
         img {
-
             @include image_presentation;
-            @include header {
-                height: 300px;
-                width: 100%;
+            @include desktop {
+                width:900px;
+                height: 500px;
+                
+
             }
             }
         
