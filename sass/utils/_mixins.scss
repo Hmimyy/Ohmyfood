@@ -34,7 +34,7 @@
 }
 
 @mixin desktop {
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 1025px) {
         @content;
     }
 }
@@ -149,8 +149,6 @@
 
 @mixin anim_bouton {
     transform: scale(1);
-    transition-property: transform;
-    transition-duration: 200ms;
     &:hover {
         transform: scale(1.05);
     }

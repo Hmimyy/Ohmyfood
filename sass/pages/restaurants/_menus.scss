@@ -38,15 +38,15 @@
             display: flex;
             justify-content: space-between;
             flex-direction: row;
-            width: auto;
+            height: 70px;
+            position: relative;
             box-shadow: 0 0 6px 4px rgb(205, 203, 203);
             border-radius: 20px;
             border: none; 
-            overflow: hidden;
+            @include point;
             .text {
                 display: flex;
                 flex-direction: column;
-                height: 60px;
                 gap: 10px;
                 width: auto;
                 flex: 1;

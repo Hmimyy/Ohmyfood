@@ -21,7 +21,8 @@ a {
 
 body {
   background-color: #f6f6f6;
-  width: 100%;
+  width: auto;
+  margin: 0;
 }
 
 h1, h2,
@@ -36,8 +37,8 @@ p, h3, h4 {
 
 .container {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   background-color: #f6f6f6;
   display: flex;
   justify-content: center;
@@ -47,6 +48,9 @@ p, h3, h4 {
   animation: bounce 1.6s ease-in-out both;
   animation-delay: 3s;
   left: -15px;
+  right: -15px;
+  top: -10px;
+  bottom: -20px;
 }
 .container .load {
   display: flex;
@@ -107,7 +111,7 @@ footer {
   background-color: #353535;
   padding: 20px;
   gap: 10px;
-  margin-top: 40px;
+  margin-top: 20px;
   width: auto;
 }
 footer .titre_footer {
@@ -115,7 +119,7 @@ footer .titre_footer {
   flex-direction: column;
   color: #f6f6f6;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   footer .titre_footer {
     display: flex;
     flex-direction: row;
@@ -124,14 +128,14 @@ footer .titre_footer {
 footer h2 {
   font-family: "Shrikhand", cursive;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   footer h2 {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   footer .text_footer {
     display: flex;
     flex-direction: row;
@@ -148,8 +152,6 @@ footer .text_footer a {
 }
 footer .text_footer a:hover {
   transform: scale(1);
-  transition-property: transform;
-  transition-duration: 200ms;
 }
 footer .text_footer a:hover:hover {
   transform: scale(1.05);
@@ -174,7 +176,7 @@ footer .text_footer a:hover:hover {
   padding: 30px;
   background-color: #f6f6f6;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .reservation {
     display: flex;
     flex-direction: row;
@@ -203,8 +205,6 @@ footer .text_footer a:hover:hover {
 }
 .reservation .button_explorer:hover {
   transform: scale(1);
-  transition-property: transform;
-  transition-duration: 200ms;
   background: linear-gradient(65deg, #9356DC 20%, #FF79DA 80%);
   box-shadow: 5px 5px 20px 5px #9356DC, -5px -5px 20px 5px #FF79DA;
 }
@@ -218,7 +218,7 @@ footer .text_footer a:hover:hover {
   gap: 20px;
   padding-top: 20px;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .fonctionnement {
     flex-direction: row;
     flex-wrap: wrap;
@@ -226,7 +226,7 @@ footer .text_footer a:hover:hover {
     column-gap: 15px;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .fonctionnement > h2 {
     width: 100%;
     display: flex;
@@ -242,19 +242,22 @@ footer .text_footer a:hover:hover {
   border-radius: 20px;
   cursor: pointer;
   height: 65px;
+  width: auto;
+  margin-left: 20px;
   position: relative;
 }
 .fonctionnement .bouton_fonc:hover {
   transform: scale(1);
-  transition-property: transform;
-  transition-duration: 200ms;
 }
 .fonctionnement .bouton_fonc:hover:hover {
   transform: scale(1.05);
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .fonctionnement .bouton_fonc {
     flex-basis: 30%;
+    flex-direction: row;
+    justify-content: unset;
+    gap: 10px;
   }
 }
 .fonctionnement .bouton_fonc > p {
@@ -290,7 +293,7 @@ footer .text_footer a:hover:hover {
   padding-top: 20px;
   margin: 0 10px 0 10px;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .restaurants {
     flex-direction: row;
     justify-content: center;
@@ -298,7 +301,7 @@ footer .text_footer a:hover:hover {
     flex-basis: 25%;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .restaurants > h2 {
     width: 100%;
     display: flex;
@@ -314,7 +317,7 @@ footer .text_footer a:hover:hover {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .restaurants .carte_resto {
     flex: 45%;
   }

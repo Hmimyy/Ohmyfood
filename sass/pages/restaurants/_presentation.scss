@@ -36,7 +36,7 @@ header {
         img {
 
             @include image_presentation;
-            @include desktop {
+            @include header {
                 height: 300px;
                 width: 100%;
             }
