@@ -8,11 +8,7 @@
     border-radius: 20px 20px 0 0;
 
     @include desktop {
-        position: unset;
-        top: unset;
-        display: flex;
-        padding: 50px;
-        flex-wrap: wrap;
+     
     }
 
     h1 {

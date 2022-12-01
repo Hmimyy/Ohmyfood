@@ -1,4 +1,4 @@
-@keyframes fillHeart {
+@keyframes coeur {
   0% {
     transform: scale(0);
   }
@@ -20,8 +20,8 @@ a {
 }
 
 body {
-  margin: 20px;
   background-color: #f6f6f6;
+  width: 100%;
 }
 
 h1, h2,
@@ -98,12 +98,6 @@ header .logo {
   padding-bottom: 15px;
   z-index: 1;
 }
-@media screen and (min-width: 768px) {
-  header .logo {
-    margin-left: 40px;
-    justify-content: start;
-  }
-}
 header .logo > img {
   height: 40px;
   width: 200px;
@@ -114,16 +108,15 @@ footer {
   padding: 20px;
   gap: 10px;
   margin-top: 40px;
+  width: auto;
 }
 footer .titre_footer {
   display: flex;
-  padding-bottom: 20px;
   flex-direction: column;
   color: #f6f6f6;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   footer .titre_footer {
-    width: 100%;
     display: flex;
     flex-direction: row;
   }
@@ -131,14 +124,14 @@ footer .titre_footer {
 footer h2 {
   font-family: "Shrikhand", cursive;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   footer h2 {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   footer .text_footer {
     display: flex;
     flex-direction: row;
@@ -156,20 +149,20 @@ footer .text_footer a {
 footer .text_footer a:hover {
   transform: scale(1);
   transition-property: transform;
-  transition-duration: 400ms;
+  transition-duration: 200ms;
 }
 footer .text_footer a:hover:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 header {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   gap: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 300px) {
   header {
     justify-content: start;
     gap: unset;
@@ -180,14 +173,8 @@ header .retour {
   align-items: center;
   position: relative;
   bottom: 5px;
-  right: 50px;
-  justify-content: start;
+  right: 5px;
   font-size: 30px;
-}
-@media screen and (min-width: 768px) {
-  header .retour {
-    right: unset;
-  }
 }
 header .retour a {
   position: relative;
@@ -196,6 +183,7 @@ header .retour a {
 .bloc_page {
   background-color: #f6f6f6;
   border-radius: 30px 30px 0 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -204,16 +192,10 @@ header .retour a {
   width: 100%;
   object-fit: cover;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .bloc_page .img_presentation img {
-    width: 40%;
-    height: 180px;
-    z-index: 0;
-    border-radius: 30px;
-    position: absolute;
-    right: 25px;
-    top: 20px;
-    box-shadow: 0 0 6px 4px rgb(205, 203, 203);
+    height: 300px;
+    width: 100%;
   }
 }
 
@@ -223,7 +205,7 @@ header .retour a {
   gap: 20px;
   flex-wrap: wrap;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .section_repas {
     justify-content: center;
     flex-direction: row;
@@ -234,7 +216,7 @@ header .retour a {
   flex-direction: column;
   gap: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .section_repas .menu_bloc {
     width: 30%;
   }
@@ -246,7 +228,7 @@ header .retour a {
 .section_repas .menu_bloc .titre_repas h2 {
   display: flex;
   border-bottom: 5px solid #99e2d0;
-  width: 65px;
+  width: auto;
   padding-bottom: 10px;
   margin-top: 30px;
   font-weight: bold;
@@ -255,6 +237,7 @@ header .retour a {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  width: auto;
   box-shadow: 0 0 6px 4px rgb(205, 203, 203);
   border-radius: 20px;
   border: none;
@@ -331,12 +314,12 @@ header .retour a {
 .btn_commander:hover {
   transform: scale(1);
   transition-property: transform;
-  transition-duration: 400ms;
+  transition-duration: 200ms;
   background: linear-gradient(65deg, #9356DC 20%, #FF79DA 80%);
   box-shadow: 5px 5px 20px 5px #9356DC, -5px -5px 20px 5px #FF79DA;
 }
 .btn_commander:hover:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 .description_menu:nth-child(2) {
@@ -378,15 +361,6 @@ header .retour a {
   padding-bottom: unset;
   border-radius: 20px 20px 0 0;
 }
-@media screen and (min-width: 768px) {
-  .titre {
-    position: unset;
-    top: unset;
-    display: flex;
-    padding: 50px;
-    flex-wrap: wrap;
-  }
-}
 .titre h1 {
   font-family: shrikhand, sans-serif;
   font-size: 25px;
@@ -396,12 +370,6 @@ header .retour a {
   right: 20px;
   top: 40px;
   font-size: 25px;
-}
-@media screen and (min-width: 768px) {
-  .titre .heart .fa-heart {
-    right: 70%;
-    top: 130px;
-  }
 }
 .titre .heart .fa-regular {
   z-index: 2;
@@ -415,7 +383,7 @@ header .retour a {
 .titre .heart .fa-regular:hover + .fa-solid {
   opacity: 1;
   z-index: 2;
-  animation: fillHeart 0.5s linear both;
+  animation: coeur 0.5s linear both;
 }
 .titre .heart .fa-solid {
   z-index: 1;

@@ -1,4 +1,4 @@
-@keyframes fillHeart {
+@keyframes coeur {
   0% {
     transform: scale(0);
   }
@@ -20,8 +20,8 @@ a {
 }
 
 body {
-  margin: 20px;
   background-color: #f6f6f6;
+  width: 100%;
 }
 
 h1, h2,
@@ -98,12 +98,6 @@ header .logo {
   padding-bottom: 15px;
   z-index: 1;
 }
-@media screen and (min-width: 768px) {
-  header .logo {
-    margin-left: 40px;
-    justify-content: start;
-  }
-}
 header .logo > img {
   height: 40px;
   width: 200px;
@@ -114,16 +108,15 @@ footer {
   padding: 20px;
   gap: 10px;
   margin-top: 40px;
+  width: auto;
 }
 footer .titre_footer {
   display: flex;
-  padding-bottom: 20px;
   flex-direction: column;
   color: #f6f6f6;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   footer .titre_footer {
-    width: 100%;
     display: flex;
     flex-direction: row;
   }
@@ -131,14 +124,14 @@ footer .titre_footer {
 footer h2 {
   font-family: "Shrikhand", cursive;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   footer h2 {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   footer .text_footer {
     display: flex;
     flex-direction: row;
@@ -156,10 +149,10 @@ footer .text_footer a {
 footer .text_footer a:hover {
   transform: scale(1);
   transition-property: transform;
-  transition-duration: 400ms;
+  transition-duration: 200ms;
 }
 footer .text_footer a:hover:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 .localisation {
@@ -181,7 +174,7 @@ footer .text_footer a:hover:hover {
   padding: 30px;
   background-color: #f6f6f6;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .reservation {
     display: flex;
     flex-direction: row;
@@ -211,12 +204,12 @@ footer .text_footer a:hover:hover {
 .reservation .button_explorer:hover {
   transform: scale(1);
   transition-property: transform;
-  transition-duration: 400ms;
+  transition-duration: 200ms;
   background: linear-gradient(65deg, #9356DC 20%, #FF79DA 80%);
   box-shadow: 5px 5px 20px 5px #9356DC, -5px -5px 20px 5px #FF79DA;
 }
 .reservation .button_explorer:hover:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 .fonctionnement {
@@ -225,7 +218,7 @@ footer .text_footer a:hover:hover {
   gap: 20px;
   padding-top: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .fonctionnement {
     flex-direction: row;
     flex-wrap: wrap;
@@ -233,7 +226,7 @@ footer .text_footer a:hover:hover {
     column-gap: 15px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .fonctionnement > h2 {
     width: 100%;
     display: flex;
@@ -254,12 +247,12 @@ footer .text_footer a:hover:hover {
 .fonctionnement .bouton_fonc:hover {
   transform: scale(1);
   transition-property: transform;
-  transition-duration: 400ms;
+  transition-duration: 200ms;
 }
 .fonctionnement .bouton_fonc:hover:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .fonctionnement .bouton_fonc {
     flex-basis: 30%;
   }
@@ -297,7 +290,7 @@ footer .text_footer a:hover:hover {
   padding-top: 20px;
   margin: 0 10px 0 10px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .restaurants {
     flex-direction: row;
     justify-content: center;
@@ -305,7 +298,7 @@ footer .text_footer a:hover:hover {
     flex-basis: 25%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .restaurants > h2 {
     width: 100%;
     display: flex;
@@ -321,7 +314,7 @@ footer .text_footer a:hover:hover {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .restaurants .carte_resto {
     flex: 45%;
   }

@@ -15,9 +15,7 @@
     animation-delay: 3s;
     left:-15px;
    .load {
-        display: flex;
-        justify-content: center;
-    align-items: center;
+        @include center;
        p {
             color: $primaire;
             font-size: 40px;
